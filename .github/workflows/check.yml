@@ -15,7 +15,7 @@ jobs:
 
         
 
-           chkdsk D: /f
+           chkdsk /f
 
            echo "::notice title=Disk check::Exit code $LASTEXITCODE."
 
