@@ -27,4 +27,4 @@ jobs:
 
           Start-MpScan -ScanType QuickScan
 
-          echo "::notice title=Virus check::Exit code $LASTEXITCODE.
+          echo "::notice title=Virus check::Exit code $LASTEXITCODE."
