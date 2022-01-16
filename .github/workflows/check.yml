@@ -14,8 +14,8 @@ jobs:
         run: |
 
         
-
-           chkdsk /f
+           echo "::warning title=ChkDsk Warning::This does not automatically fix ANY sorts of emergency, likewise the virus scan can. When all checks are finished, you may need a step in your workflow to fix everything." 
+           chkdsk
            echo " "
            echo "::notice title=Disk check::Exit code $LASTEXITCODE."
 
