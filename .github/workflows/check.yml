@@ -1,6 +1,5 @@
 name: Emergency virus and disk scan
-
-description: Keep your workflow safe by checking the disk and scanning for viruses
+on: push
 
 jobs:
 
