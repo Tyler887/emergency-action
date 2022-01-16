@@ -25,6 +25,10 @@ jobs:
 
         run: |
 
+          echo "Scanning for viruses..."
           Start-MpScan -ScanType QuickScan -Debug
+          echo "Done!"
+          echo "Uninstalling all detected viruses..."
           Remove-MpThreat
+          echo "Uninstalled malware!"
           echo "::notice title=Virus check::Scan finished. If exit code is 0, you are no longer in an emergency."
