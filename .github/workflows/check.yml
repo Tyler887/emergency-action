@@ -24,13 +24,32 @@ jobs:
       - name: Preform Windows Security virus scan
 
         run: |
-          echo "Scan begins in 10 seconds. DO NOT CANCEL THE WORKFLOW."
-          Start-Sleep -Seconds 10
+          echo "Scan begins in 10 seconds. ⚠️ DO NOT CANCEL THE WORKFLOW. ⚠️"
+          echo "10."
+          Start-Sleep -Seconds 1
+          echo "9."
+          Start-Sleep -Seconds 1
+          echo "8."
+          Start-Sleep -Seconds 1
+          echo "7."
+          Start-Sleep -Seconds 1
+          echo "6."
+          Start-Sleep -Seconds 1 
+          echo "5."
+          Start-Sleep -Seconds 1  
+          echo "4."
+          Start-Sleep -Seconds 1
+          echo "3."
+          Start-Sleep -Seconds 1
+          echo "2.."
+          Start-Sleep -Seconds 1
+          echo "1."
+          Start-Sleep -Seconds 1
           echo "Scanning for viruses... Please do not cancel the workflow."
           Start-MpScan -ScanType QuickScan
           echo "Done!"
           echo "Uninstalling all detected viruses... Please do not cancel the workflow."
           Remove-MpThreat
-          echo "Uninstalled malware!"
+          echo "✅ Uninstalled malware!"
 
           echo "::notice title=Virus check::Scan finished. If exit code is 0, you are no longer in an emergency. You are now free to cancel the workflow if you want to."
