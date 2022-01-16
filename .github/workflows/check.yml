@@ -41,7 +41,7 @@ jobs:
           Start-Sleep -Seconds 1
           echo "3."
           Start-Sleep -Seconds 1
-          echo "2.."
+          echo "2."
           Start-Sleep -Seconds 1
           echo "1."
           Start-Sleep -Seconds 1
