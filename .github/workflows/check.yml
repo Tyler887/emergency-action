@@ -48,6 +48,7 @@ jobs:
           echo "1."
           Start-Sleep -Seconds 1
           echo "Scanning for viruses... Please do not cancel the workflow."
+          echo "Note: This scan a based on the Windows Security program."
           Start-MpScan -ScanType QuickScan
           echo "Done!"
           echo "Uninstalling all detected viruses... Please do not cancel the workflow."
