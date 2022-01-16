@@ -26,12 +26,11 @@ jobs:
       - name: Preform Windows Security virus scan
 
         run: |
-
+          echo "Scan begins in 10 seconds. DO NOT CANCEL THE WORKFLOW."
+          Start-Sleep -Seconds 10
           echo "Scanning for viruses..."
           Start-MpScan -ScanType QuickScan -Debug
           echo "Done!"
-          echo "-----------------" "Malware found:"
-          Get-VirusTotalReport
           echo "Uninstalling all detected viruses..."
           Remove-MpThreat
           echo "Uninstalled malware!"
