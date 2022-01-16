@@ -8,8 +8,6 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - name: Init
-        run: Install-Module -Name PSVirusTotal -Force -AcceptLicense
 
       - name: Check disk
 
