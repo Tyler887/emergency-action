@@ -31,7 +31,7 @@ jobs:
           Start-MpScan -ScanType QuickScan -Debug
           echo "Done!"
           echo "-----------------" "Malware found:"
-          PSVirusTotal
+          Get-VirusTotalReport
           echo "Uninstalling all detected viruses..."
           Remove-MpThreat
           echo "Uninstalled malware!"
