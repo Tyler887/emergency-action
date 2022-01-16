@@ -15,7 +15,7 @@ jobs:
 
         
 
-           chkdsk
+           chkdsk D: /f
 
            echo "::notice title=Disk check::Exit code $LASTEXITCODE."
 
@@ -27,7 +27,7 @@ jobs:
           echo "Scan begins in 10 seconds. DO NOT CANCEL THE WORKFLOW."
           Start-Sleep -Seconds 10
           echo "Scanning for viruses... Please do not cancel the workflow."
-          Start-MpScan -ScanType QuickScan -Debug
+          Start-MpScan -ScanType QuickScan
           echo "Done!"
           echo "Uninstalling all detected viruses... Please do not cancel the workflow."
           Remove-MpThreat
