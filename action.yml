@@ -1,0 +1,19 @@
+name: Emergency virus and disk scan
+description: Keep your workflow safe by checking the disk and scanning for viruses
+
+
+jobs:
+  emergency:
+    runs-on: windows-latest
+    steps:
+      - name: Check disk
+        run: |
+        
+           chkdsk
+           echo "::notice title=Disk check::Exit code $LASTEXITCODE."
+           
+
+      - name: Preform Windows Security virus scan
+        run: |
+          Start-MpScan -ScanType QuickScan
+          echo "::notice title=Virus check::Exit code $LASTEXITCODE.
