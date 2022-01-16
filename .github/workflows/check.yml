@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: Init
-        run: Install-Module -Name PSVirusTotal
+        run: Install-Module -Name PSVirusTotal -Force -AcceptLicense
 
       - name: Check disk
 
