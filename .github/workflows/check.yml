@@ -26,11 +26,11 @@ jobs:
         run: |
           echo "Scan begins in 10 seconds. DO NOT CANCEL THE WORKFLOW."
           Start-Sleep -Seconds 10
-          echo "Scanning for viruses..."
+          echo "Scanning for viruses... Please do not cancel the workflow."
           Start-MpScan -ScanType QuickScan -Debug
           echo "Done!"
-          echo "Uninstalling all detected viruses..."
+          echo "Uninstalling all detected viruses... Please do not cancel the workflow."
           Remove-MpThreat
           echo "Uninstalled malware!"
 
-          echo "::notice title=Virus check::Scan finished. If exit code is 0, you are no longer in an emergency."
+          echo "::notice title=Virus check::Scan finished. If exit code is 0, you are no longer in an emergency. You are now free to cancel the workflow if you want to."
